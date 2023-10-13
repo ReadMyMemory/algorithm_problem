@@ -7,12 +7,13 @@ public class a2439 {
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();
         for(int i = 0; i < num; i++) {
-            for(int j = 0; j < num - i; j++) {
+            for(int j = 1; j < num - i; j++) {
                 System.out.print(" ");
             }
             for(int p = 0; p <= i; p++) {
                 System.out.print("*");
             }
+            System.out.print("\n");
         }
     }
 }
