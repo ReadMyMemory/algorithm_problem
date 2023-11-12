@@ -1,4 +1,4 @@
-package class1;
+package class1.step1;
 
 import java.io.BufferedReader;
 import java.io.IOException;
