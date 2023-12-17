@@ -43,7 +43,7 @@ public class S2_1874 {
                         if (stack.peek() < num) { // 만약 peek가 num보다 작으면
                             status = false; // 스택 구현 불가.
                             break; // while 반복문 탈출
-                        } else {
+                        } else { //
                             stack.pop(); // 스택 맨 위 제거
                             list.add("-"); // 리스트에 기록
                         }
@@ -53,7 +53,7 @@ public class S2_1874 {
                     //status에 문제가 없으면서 반복문이 끝나면 stack.peek() == num 상태임. 그러니 이제 제거하면 된다.
                     stack.pop(); // 스택 맨 위 제거
                     list.add("-"); // 리스트에 기록
-                } else {
+                } else { // 피크랑 들어온 숫자랑 비교해서 빼줘야 하는데 stack이 비어있다면, 이건 stack으로 구현할 수 없는 거라 NO 출력. 예제 입력 2와 같은 경우다. 마지막 4를 비교하려고 해도 스택이 아무것도 없음.
                     status = false;
                 }
             }
