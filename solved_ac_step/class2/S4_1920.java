@@ -22,11 +22,6 @@ public class S4_1920 {
 //        for(int a : list1)
 //            System.out.println(a);
 
-        String str = "11";
-        if(str.equals("11"))
-            
-            if(dao.UserCheck(em) != null)
-
         int testcase = Integer.parseInt(br.readLine());
         StringTokenizer st2 = new StringTokenizer(br.readLine());
         for(int i = 0; i < testcase; i++) {
