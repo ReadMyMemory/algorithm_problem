@@ -1,4 +1,4 @@
-package solved;
+package solved_ac_step.class3;
 
 import java.io.BufferedReader;
 import java.io.IOException;

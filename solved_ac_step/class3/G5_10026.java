@@ -1,9 +1,9 @@
-package solved;
+package solved_ac_step.class3;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
-public class a10026 {
+public class G5_10026 {
 
     //구조체 하나 만들어줌. 큐에 넣기 위한
     //여기서 y와 x의 위치를 반대로 한 것은 배열의 구조를 쉽게 보기 위함
