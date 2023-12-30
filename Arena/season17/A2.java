@@ -20,7 +20,7 @@ public class A2 {
         }
         boolean status = true;
         int count = 0;
-        if(N == 1) status = false;
+//        if(N == 1) status = false; 진짜 조건 애매모호한게 정말 싫다. 1은 걍 0 출력 하면 되는거였다.
         if(N == 2) {
             if(track[0] >= track[1]) {
                 count++;
