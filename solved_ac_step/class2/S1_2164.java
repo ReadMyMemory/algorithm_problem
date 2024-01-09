@@ -14,7 +14,7 @@ public class S1_2164 {
             deque.offerLast(i); //i를 반대로 size부터 1씩 빼면서 add 또는 offerFirst 해도 된다.
         }
 
-        while(true) {
+        while(deque.size() != 1) { // 1을 넣었을 땐 버리는 과정 없이 반복문 패스한다.
             deque.pollFirst(); // 맨 위의 카드를 버린다.
             if(deque.size() == 1) break; //카드가 1장이 될 수 있는 상황은 버릴때만이다.
             int value = deque.pollFirst(); // 그다음 맨 위에 카드를 빼서
