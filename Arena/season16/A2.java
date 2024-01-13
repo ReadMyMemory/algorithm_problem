@@ -1,7 +1,5 @@
-package Arena.season17;
+package Arena.season16;
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.StringTokenizer;
 
 public class A2 {
