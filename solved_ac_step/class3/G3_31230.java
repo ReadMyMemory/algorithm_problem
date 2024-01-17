@@ -8,6 +8,7 @@ import java.util.StringTokenizer;
 public class G3_31230 {
     static int N, M, A, B, start;
     static ArrayList<ArrayList<Node>> graph;
+    static ArrayList<ArrayList<Node>> degraph;
 
 
     static class Node {
@@ -40,13 +41,13 @@ public class G3_31230 {
         A = Integer.parseInt(st.nextToken()); // 민겸이의 도시 A = 다익스트라 알고리즘 수행을 위한 시작 노드 선택
         B = Integer.parseInt(st.nextToken()); // 시은이의 도시 B
 
-        ArrayList<Integer>[] parents = new ArrayList[N+1]; // 부모 노드를 저장할 딕셔너리 배열.
-        for(int i = 0; i < N + 1; i++)
-            parents[i] = new ArrayList<>();
-
         graph = new ArrayList<ArrayList<Node>>();
         for(int i = 0; i < N + 1; i++)
             graph.add(new ArrayList<Node>());
+
+        degraph = new ArrayList<ArrayList<Node>>(); // 역추적을 위한 그래프다.
+        for(int i = 0; i < N + 1; i++)
+            degraph.add(new ArrayList<Node>());
 
         //그래프 입력
         for(int i = 0; i < M; i++) {
@@ -55,6 +56,7 @@ public class G3_31230 {
             int b = Integer.parseInt(st.nextToken()); // -> 끝 노드
             int cost = Integer.parseInt(st.nextToken()); // 가중치(weight)
             graph.get(a).add(new Node(b, cost));
+            degraph.get(b).add(new Node(a, cost));
         }
 
         //다익스트라 알고리즘 초기화
@@ -73,48 +75,15 @@ public class G3_31230 {
             // 선택된 노드의 모든 주변 노드 고려
             for(int i = 0; i < graph.get(curNode.idx).size(); i++) {
                 Node nxtNode = graph.get(curNode.idx).get(i);
-                parents[i+1].add(curNode.idx); // 이전 노드 저장.
-//                System.out.println("*in*"+parents[i]);
-
-                if(dist[nxtNode.idx] == curNode.cost + nxtNode.cost)
-                    parents[nxtNode.idx].add(curNode.idx);
 
                 if (dist[nxtNode.idx] > curNode.cost + nxtNode.cost) {
-                    parents[nxtNode.idx].remove(parents[nxtNode.idx].size() - 1); // 리스트의 가장 마지막 값 제거.
-                    parents[nxtNode.idx].add(curNode.idx); // 이전 노드 저장.
                     dist[nxtNode.idx] = curNode.cost + nxtNode.cost;
-//                    System.out.println("*ch*"+parents[nxtNode.idx]);
-                    // 갱신된 경우에만 큐에 넣는다.
                     q.offer(new Node(nxtNode.idx, dist[nxtNode.idx]));
                 }
             }
         }
-
-        //각각 노드의 이전 노드 저장했으니, 경로를 역추적한다.
-        ArrayList<Integer> answer = new ArrayList<>();
-        answer.add(B); // 시은이 도시 추가
-        for(int i = 0; i < parents[B].size(); i++) {
-            int temp = parents[B].get(i);
-            while()
-        }
-
-
-        bw.write(B+" ");
-        bw.write()
-        int count = 1;
-
-        while(path != parents[A]) {
-            int temp = parents[path];
-//            bw.write(temp+" ");
-            path = parents[temp];
-            count++;
-//            bw.write(path+" ");
-        }
-//        System.out.println(count);
-//        bw.flush();
-        for(int a : parents)
-            System.out.print(a+" ");
-        br.close();
-        bw.close();
+        //여기까지 했을 때 일단 A를 기준으로 최단 경로 계산은 됨.
+        //이제 최단 경로로 갈 수 있는 모든 정점 추적해야하는데
+        //1. 역추적 2.중간 경로 생각.. 뭘로 해야할까?
     }
 }
