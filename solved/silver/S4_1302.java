@@ -13,7 +13,7 @@ public class S4_1302 {
         int max = 0;
         for(int i = 0; i < number; i++) {
             String str = br.readLine();
-            map.put(str, map.getOrDefault(str, 0) + 1); // getOrDefault에 대해서도 처음 알았다. 키에 대한 값을 반환하는 메서드고, 키가 맵에 존재하지 않으면 기본값(defaultValue)을 반환한다. 그 기본값을 0으로 한거다. 그다음 1을 더함.
+            map.put(str, map.getOrDefault(str, 0) + 1);// getOrDefault에 대해서도 처음 알았다. 키에 대한 값을 반환하는 메서드고, 키가 맵에 존재하지 않으면 기본값(defaultValue)을 반환한다. 그 기본값을 0으로 한거다. 그다음 1을 더함.
             max = Math.max(max, map.get(str));
         }
         ArrayList<String> list = new ArrayList<>();
@@ -24,3 +24,7 @@ public class S4_1302 {
         System.out.println(list.get(0));
     }
 }
+
+/*
+getOrDefault(), map.entrySet() 에 대해 배웠다.
+ */
