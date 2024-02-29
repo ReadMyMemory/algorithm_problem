@@ -18,8 +18,7 @@ public class G4_1043 {
         st = new StringTokenizer(br.readLine());
         int tod = Integer.parseInt(st.nextToken());
         ArrayList<Integer> isTruth = new ArrayList<>();
-        while(tod -> 0) {
+//        while(tod -> 0) {
             isTruth.add(Integer.parseInt(st.nextToken()));
         }
     }
-}
