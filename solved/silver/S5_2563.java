@@ -1,4 +1,4 @@
-package solved.bronze;
+package solved.silver;
 import java.io.*;
 import java.util.StringTokenizer;
 
