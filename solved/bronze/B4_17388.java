@@ -2,7 +2,7 @@ package solved.bronze;
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class B3_17388 {
+public class B4_17388 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
