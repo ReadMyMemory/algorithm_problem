@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.Collections;
 
 public class fruit_seller_135808 {
-    public int solution(int k, int m, int[] score) {
+    int solution(int k, int m, int[] score) {
         int answer = 0;
         int size = score.length;
 
