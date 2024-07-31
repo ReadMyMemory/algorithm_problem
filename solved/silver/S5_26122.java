@@ -16,10 +16,11 @@ public class S5_26122 {
         int max = 0;
 
         //문자열 스택에 입력
-        for(int i = 0; i < K; i++) {
-            if(s.charAt(i) == 'N')
-
-        }
+//        for(int i = 0; i < K; i++) {
+//            if(s.charAt(i) == 'N')
+//
+//
+//        }
 
     }
 }
