@@ -2,6 +2,20 @@ package solved.bronze.B2;
 import java.io.*;
 import java.util.StringTokenizer;
 
+/*
+문제를 풀면서 틀렸던 이유 2가지
+
+1. 맥박 최소치보다 낮아지는 경우 휴식을 할 수 없다고 생각했는데, 그게 아니라 문제를 다시 읽어보니
+휴식을 통해 낮아지는 맥박 수치는 최소치보다 낮아질 수 없다였다. 즉, 휴식으로 맥박 수치가 최소치보다
+낮아지면 맥박 수치를 최소치로 조정해야 했다.
+
+2. 운동을 하고 나서 맥박 최대치가 높아지면 휴식을 하는게 아니라, 이번에 운동을 해야 하는데 운동을 하면
+맥박 최대치를 넘겨버리는 경우, 운동을 하는 게 아니라 휴식을 해야한다. 그 부분을 놓쳤었다.
+
+지문을 잘 읽자...
+
+*/
+
 public class B2_1173 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -23,13 +37,14 @@ public class B2_1173 {
                     now_m += T; // 운동하기
                     minute++;
                     now_N++;
+                } else {
+                    while (now_m + T > M) { // 운동 한번 했을 때 맥박 최대치를 넘어버린다면 운동을 하지 않고 휴식으로 맥박을 낮추기
+                        now_m -= R;
+                        minute++;
+                        if (now_m < m) // 맥박은 최소치보다 낮아질 수 없다. 현재 맥박에 그보다 낮다면 최소치로 조정
+                            now_m = m;
+                    }
                 }
-                while(now_m > M) { // 운동 한번 했을 때 맥박 최대치를 넘어버린다면 운동을 하지 않고 휴식으로 맥박을 낮추기
-                    now_m -= R;
-                    minute++;
-                }
-                if(now_m < m) // 맥박은 최소치보다 낮아질 수 없다. 현재 맥박에 그보다 낮다면 최소치로 조정
-                    now_m = m;
             }
             System.out.println(minute);
         }
