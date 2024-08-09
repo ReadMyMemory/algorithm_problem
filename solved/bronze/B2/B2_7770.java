@@ -27,10 +27,10 @@ import java.io.*;
   * + *
     *
 
-
-
 그러면 4층은?
 12개를 추가해야한다.
+
+
 25 + 13 + 5 + 1 = 44개가 된다.
 여기서 규칙은 다음과 같다.
 가운데를 기준으로 테두리가 한줄씩 증가하는 형태라고 생각하면 되므로,
@@ -38,19 +38,31 @@ import java.io.*;
 S_n= S_(n-1) + n * 2 + (n-2) * 2
  */
 
+
+/*
+1
+1 + 5    6
+1 + 5 + 5 + (4i - 4)   19
+
+ */
 public class B2_7770 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int n = Integer.parseInt(br.readLine());
-        int[] dp = new int[100000];
+        long n = Long.parseLong(br.readLine());
+        long[] dp = new long[1000000];
         dp[1] = 1;
         int count = 0;
-        for(int i = 2; i <= 100000; i++) {
-            dp[i] = dp[i-1] + (4 * i - 4);
+        int floor = 1; // floor은 1층의 블럭 개수임.
+
+        int i = 2;
+        while(true) {
+            floor += 4 * i - 4;
+            dp[i] = dp[i-1] + floor;
             if(dp[i] > n) {
                 count = i - 1;
                 break;
             }
+            i++;
         }
         System.out.println(count);
     }
