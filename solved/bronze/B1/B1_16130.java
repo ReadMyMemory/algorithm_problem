@@ -10,22 +10,22 @@ import java.io.*;
 무기 퇴사를 당한 경우 반복문을 break 해버리고 바로 출력해버렸는데, 이후 추가 벌점을 받아 영구 퇴사를 당할 수도 있었다.
 따라서 영구 퇴사를 당하는지까지 sum을 지켜봐야한다.
 
-계속 시간초과나서 일단 미루기
+언어에 따른 시간 제한 차등이 주어지지 않아 기존의 방법으로 풀긴 어렵다
+다른 언어로 풀어야할듯?
  */
 
 public class B1_16130 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         int number = Integer.parseInt(br.readLine());
-        String[] so = new String[number];
-        for(int i = 0; i < number; i++)
-            so[i] = br.readLine();
-        for(int j = 0; j < number; j++) {
+        while (number --> 0) {
+            String s = br.readLine();
             int sum = 0;
             int week = 0;
             int index_week = 0;
-            for (int i = 0; i < so[j].length(); i++) {
-                int c = so[j].charAt(i) - '0';
+            for (int i = 0; i < s.length(); i++) {
+                int c = s.charAt(i) - '0';
                 if (c >= 17)
                     c -= 7;
                 sum += c;
@@ -39,12 +39,14 @@ public class B1_16130 {
                     break;
             }
             if(sum >= 50)
-                System.out.println(week + "(09)");
+                bw.write(week + "(09)\n");
             else if(sum >= 40)
-                System.out.println(week + "(weapon)");
+                bw.write(week + "(weapon)\n");
             else
-                System.out.println(week);
+                bw.write(week+"\n");
         }
+        bw.flush();
         br.close();
+        bw.close();
     }
 }
