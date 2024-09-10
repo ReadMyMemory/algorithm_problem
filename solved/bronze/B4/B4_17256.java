@@ -14,8 +14,6 @@ public class B4_17256 {
         st = new StringTokenizer(br.readLine());
         for(int i = 0; i < 3; i++)
             c[i] = Integer.parseInt(st.nextToken());
-        System.out.println((c[2] - a[2])+" "+(c[2] / a[2])+" "+(c[2]-a[0]);
-
-
+        System.out.println((c[0] - a[2])+" "+(c[1] / a[1])+" "+(c[2]-a[0]));
     }
 }
