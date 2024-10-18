@@ -1,4 +1,4 @@
-package solved.silver;
+package solved.silver.dfs;
 import java.io.*;
 import java.util.StringTokenizer;
 
