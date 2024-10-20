@@ -33,7 +33,6 @@ public class G4_1504 {
 
 
 
-
     static ArrayList<ArrayList<Node>> list;
     static int N, E;
     static int[] dist;
