@@ -1,0 +1,26 @@
+import java.io.*;
+
+public class B5_14541 {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+        String id = br.readLine(); 
+
+        String fan = ":fan:";
+        String centerLine = ":fan::" + id + "::fan:";
+
+        String fanLine = fan + fan + fan;
+
+        bw.write(fanLine);
+        bw.newLine();
+        bw.write(centerLine);
+        bw.newLine();
+        bw.write(fanLine);
+        bw.newLine();
+
+        bw.flush();
+        bw.close();
+        br.close();
+    }
+}
