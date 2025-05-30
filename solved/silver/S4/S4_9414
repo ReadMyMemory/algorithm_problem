@@ -1,4 +1,4 @@
-
+package solved.silver.S4;
 import java.io.*;
 import java.util.*;
 
