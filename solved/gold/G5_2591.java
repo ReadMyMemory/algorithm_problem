@@ -1,6 +1,7 @@
 package solved.gold;
 import java.io.*;
 // 재귀와 DP로 푸는 문제
+
 public class G5_2591 {
     static String s;
     static int[] dp;
