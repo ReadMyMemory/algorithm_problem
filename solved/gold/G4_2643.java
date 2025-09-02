@@ -2,7 +2,7 @@ package solved.gold;
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class G4_2643 {
     static class Paper implements Comparable<Paper> {
         int width, height;
 
