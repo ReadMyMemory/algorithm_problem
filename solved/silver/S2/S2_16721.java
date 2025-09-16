@@ -2,7 +2,7 @@ package solved.silver.S2;
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class S2_16721 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();

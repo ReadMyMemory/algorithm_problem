@@ -1,7 +1,8 @@
+package solved.silver.S2;
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class S2_11724 {
     static ArrayList<Integer>[] graph;
     static boolean[] visited;
     
