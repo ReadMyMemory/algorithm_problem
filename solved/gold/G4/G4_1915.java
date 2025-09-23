@@ -1,4 +1,4 @@
-package solved.gold;
+package solved.gold.G4;
 import java.io.*;
 
 // dp를 이용해서 그런걸까? 생각보다 어렵지는 않았던 것 같다.

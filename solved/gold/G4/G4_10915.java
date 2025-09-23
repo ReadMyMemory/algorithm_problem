@@ -1,4 +1,4 @@
-package solved.gold;
+package solved.gold.G4;
 import java.io.*;
 
 public class G4_10915 {

@@ -1,4 +1,4 @@
-package solved.gold;
+package solved.gold.G5;
 import java.io.*;
 // 재귀와 DP로 푸는 문제
 

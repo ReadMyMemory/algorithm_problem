@@ -1,4 +1,4 @@
-package solved.gold;
+package solved.gold.G3;
 import java.io.*;
 import java.util.*;
 

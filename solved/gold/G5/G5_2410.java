@@ -1,6 +1,5 @@
-package solved.gold;
+package solved.gold.G5;
 import java.io.*;
-import java.util.*;
 
 public class G5_2410 {
     public static void main(String[] args) throws IOException {
