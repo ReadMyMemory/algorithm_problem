@@ -2,7 +2,7 @@ package solved.gold.G4;
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class G4_1967 {
     static ArrayList<Node>[] tree;
     static boolean[] visited;
     static int farthestNode;
