@@ -1,4 +1,4 @@
-package solved.silver.bfs;
+package solved.silver.S1;
 import java.io.*;
 import java.util.LinkedList;
 import java.util.Queue;
