@@ -2,7 +2,7 @@ package solved.silver.S1;
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class S1_14888 {
     static int n;
     static int[] nums;
     static int[] op = new int[4]; // +, -, *, /
