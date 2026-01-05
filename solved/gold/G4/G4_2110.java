@@ -7,7 +7,7 @@ public class G4_2110 {
     static int[] x;
 
     static boolean canInstall(int dist) {
-        int count = 1;              // 첫 집에 설치
+        int count = 1;
         int last = x[0];
 
         for (int i = 1; i < N; i++) {
@@ -34,8 +34,8 @@ public class G4_2110 {
 
         Arrays.sort(x);
 
-        int lo = 1;                      // 최소 거리
-        int hi = x[N - 1] - x[0];        // 최대 거리
+        int lo = 1;
+        int hi = x[N - 1] - x[0];
         int ans = 0;
 
         while (lo <= hi) {
