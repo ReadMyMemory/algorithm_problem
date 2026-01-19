@@ -35,7 +35,6 @@ public class S2_1182 {
 
         // S == 0 이면 공집합(아무것도 선택 안 함)도 sum==0으로 1번 카운트되므로 제거
         if (S == 0) count--;
-
         System.out.println(count);
     }
 }
