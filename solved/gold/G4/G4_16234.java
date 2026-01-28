@@ -1,7 +1,9 @@
+package solved.gold.G4;
+
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class G4_16234 {
     static int N, L, R;
     static int[][] A;
     static boolean[][] visited;
