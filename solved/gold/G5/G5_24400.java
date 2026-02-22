@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class G5_24400 {
     static int n, q;
     static int[] A, B;
     static int diff; // A[i] != B[i] 인 개수
